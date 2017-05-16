@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anonymous vs Public Class Field</title>
+</head>
+<body>
+  <style type="text/css">
+    .benchmark .wrap {
+      display: flex;
+    }
+
+    .benchmark .user {
+      flex: 1;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+
+  </style>
+  <div class="benchmark">
+    <h5>Anonymous</h5>
+    <div id="anonymous"></div>
+  </div>
+  <div class="benchmark">
+    <h5>Public Class Fields</h5>
+    <div id="public"></div>
+  </div>
+  <script src="./../../public-class-fields/benchmark.js"></script>
+</body>
+</html>

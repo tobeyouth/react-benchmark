@@ -5,8 +5,8 @@ var webpack = require('webpack')
 
 var config = {
   entry: {
-    'pure-component/benchmark': './src/pure-component/benchmark.jsx',
-    'functional/benchmark': './src/functional/benchmark.js'
+    'public-class-fields/benchmark': './src/public-class-fields/benchmark.jsx',
+    'functional/benchmark': './src/functional/benchmark.jsx'
   },
   output: {
     filename: '[name].js',

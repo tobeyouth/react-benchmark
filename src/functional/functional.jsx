@@ -2,12 +2,13 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import Text from './functional-text'
 
-class Wrap extends React.Component {
+
+class FunctionalWrap extends React.Component {
 
   render () {
     const number = this.props.number
     return (
-      <div>
+      <div className='wrap'>
         {
           [...Array(number).keys()].map((index) => {
             return (
@@ -23,13 +24,14 @@ class Wrap extends React.Component {
   
 }
 
+export default FunctionalWrap
 
-if (!window.benchmark) {
-  window.benchmark = {}
-}
+// if (!window.benchmark) {
+//   window.benchmark = {}
+// }
 
-window.benchmark.functional = function (number) {
-  ReactDom.render(
-    <Wrap number={ number } />
-  , document.getElementById('functional'))
-}
+// window.benchmark.functional = function (number) {
+//   ReactDom.render(
+//     <Wrap number={ number } />
+//   , document.getElementById('functional'))
+// }

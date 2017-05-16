@@ -6,66 +6,55 @@
 </head>
 <body>
   <style>
-    #result, #time {
+    .benchmark .list {
       display: flex;
     }
-
-    #result > div, #time > div {
+    .benchmark .list .wrap {
       flex: 1;
+      margin: 10px;
       border: 1px solid #ccc;
-      margin: 30px;
-    }
-
-    #result p {
-      margin: 10px 0px;
-      padding: 0px 10px;
-      border-bottom: 1px solid #ccc;
     }
   </style>
-  <div id="wrap">
+  <!-- <div id="wrap">
     <div class="field">
       <input type="text" id="number">
       <button id="benchmark">run</button>
     </div>
-  </div>
-  <div id="time">
+  </div> -->
+  <!-- <div id="time">
     <div id="functional-time"></div>
     <div id="component-time"></div>
     <div id="pure-time"></div>
-  </div>
-  <div id="result">
-    <div id="functional"></div>
-    <div id="component"></div>
-    <div id="pure"></div>
-  </div>
+  </div> -->
+  <div id="benchmark"></div>
   <script src="./../../functional/benchmark.js"></script>
   <script>
-    (function () {
-      var input = document.getElementById('number');
-      var button = document.getElementById('benchmark')
-      var functionalTime = document.getElementById('functional-time')
-      var componentTime = document.getElementById('component-time')
-      var pureTime = document.getElementById('pure-time')
+    // (function () {
+    //   var input = document.getElementById('number');
+    //   var button = document.getElementById('benchmark')
+    //   // var functionalTime = document.getElementById('functional-time')
+    //   // var componentTime = document.getElementById('component-time')
+    //   // var pureTime = document.getElementById('pure-time')
 
-      button.addEventListener('click', function (e) {
-        var number = parseInt(input.value, 10);
+    //   button.addEventListener('click', function (e) {
+    //     var number = parseInt(input.value, 10);
 
-        var functionalStart = new Date().getTime()
-        window.benchmark.functional(number);
-        var functionalEnd = new Date().getTime()
-        var componentStart = new Date().getTime()
-        window.benchmark.component(number);
-        var componentEnd = new Date().getTime()
-        var pureStart = new Date().getTime()
-        window.benchmark.pure(number)
-        var pureEnd = new Date().getTime()
+    //     // var functionalStart = new Date().getTime()
+    //     window.benchmark.functional(number);
+    //     // var functionalEnd = new Date().getTime()
+    //     // var componentStart = new Date().getTime()
+    //     window.benchmark.component(number);
+    //     // var componentEnd = new Date().getTime()
+    //     // var pureStart = new Date().getTime()
+    //     window.benchmark.pure(number)
+    //     // var pureEnd = new Date().getTime()
 
-        functionalTime.innerHTML = 'Fuctional-Component use time: ' + (functionalEnd - functionalStart) + 'ms'
-        componentTime.innerHTML = 'React.Component use time: ' + (componentEnd - componentStart) + 'ms'
-        pureTime.innerHTML = 'React.PureComponent use time: ' + (pureEnd - pureStart) + 'ms'
+    //     // functionalTime.innerHTML = 'Fuctional-Component use time: ' + (functionalEnd - functionalStart) + 'ms'
+    //     // componentTime.innerHTML = 'React.Component use time: ' + (componentEnd - componentStart) + 'ms'
+    //     // pureTime.innerHTML = 'React.PureComponent use time: ' + (pureEnd - pureStart) + 'ms'
 
-      })
-    })()
+    //   })
+    // })()
   </script>
 </body>
 </html>

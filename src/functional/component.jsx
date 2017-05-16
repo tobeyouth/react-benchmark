@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import Text from './component-text'
 
-class Wrap extends React.Component {
+class ComponentWrap extends React.Component {
 
   render () {
     const number = this.props.number
     return (
-      <div>
+      <div className='wrap'>
         {
           [...Array(number).keys()].map((index) => {
             return (
@@ -23,13 +23,14 @@ class Wrap extends React.Component {
   
 }
 
+export default ComponentWrap
 
-if (!window.benchmark) {
-  window.benchmark = {}
-}
+// if (!window.benchmark) {
+//   window.benchmark = {}
+// }
 
-window.benchmark.component = function (number) {
-  ReactDom.render(
-    <Wrap number={ number } />
-  , document.getElementById('component'))
-}
+// window.benchmark.component = function (number) {
+//   ReactDom.render(
+//     <Wrap number={ number } />
+//   , document.getElementById('component'))
+// }
