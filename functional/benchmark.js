@@ -22556,16 +22556,6 @@ var ComponentWrap = function (_React$Component) {
 
 exports.default = ComponentWrap;
 
-// if (!window.benchmark) {
-//   window.benchmark = {}
-// }
-
-// window.benchmark.component = function (number) {
-//   ReactDom.render(
-//     <Wrap number={ number } />
-//   , document.getElementById('component'))
-// }
-
 /***/ }),
 /* 184 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -22632,16 +22622,6 @@ var FunctionalWrap = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = FunctionalWrap;
-
-// if (!window.benchmark) {
-//   window.benchmark = {}
-// }
-
-// window.benchmark.functional = function (number) {
-//   ReactDom.render(
-//     <Wrap number={ number } />
-//   , document.getElementById('functional'))
-// }
 
 /***/ }),
 /* 185 */
@@ -22710,16 +22690,6 @@ var PureComponentWrap = function (_React$PureComponent) {
 
 exports.default = PureComponentWrap;
 
-// if (!window.benchmark) {
-//   window.benchmark = {}
-// }
-
-// window.benchmark.pure = function (number) {
-//   ReactDom.render(
-//     <Wrap number={ number } />
-//   , document.getElementById('pure'))
-// }
-
 /***/ }),
 /* 186 */,
 /* 187 */,
@@ -22770,8 +22740,16 @@ var Benchmark = function (_React$Component) {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps, prevState) {
       _reactAddonsPerf2.default.stop();
+      var measurements = _reactAddonsPerf2.default.getLastMeasurements();
+      console.log('measurements', measurements);
+      console.log('%c printInclusive', 'font-size: 14px;color: #f00');
       _reactAddonsPerf2.default.printInclusive();
+      console.log('%c printExclusive', 'font-size: 14px;color: #f00');
+      _reactAddonsPerf2.default.printExclusive();
+      console.log('%c printWasted', 'font-size: 14px;color: #f00');
       _reactAddonsPerf2.default.printWasted();
+      // console.log('%c printOperations', 'font-size: 14px;color: #f00');
+      // Perf.printOperations()
     }
   }]);
 
@@ -22855,16 +22833,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Text = function (_React$Component) {
-  _inherits(Text, _React$Component);
+var ComponentText = function (_React$Component) {
+  _inherits(ComponentText, _React$Component);
 
-  function Text() {
-    _classCallCheck(this, Text);
+  function ComponentText() {
+    _classCallCheck(this, ComponentText);
 
-    return _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ComponentText.__proto__ || Object.getPrototypeOf(ComponentText)).apply(this, arguments));
   }
 
-  _createClass(Text, [{
+  _createClass(ComponentText, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -22875,10 +22853,10 @@ var Text = function (_React$Component) {
     }
   }]);
 
-  return Text;
+  return ComponentText;
 }(_react2.default.Component);
 
-exports.default = Text;
+exports.default = ComponentText;
 
 /***/ }),
 /* 190 */
@@ -22930,16 +22908,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Text = function (_React$PureComponent) {
-  _inherits(Text, _React$PureComponent);
+var PureText = function (_React$PureComponent) {
+  _inherits(PureText, _React$PureComponent);
 
-  function Text() {
-    _classCallCheck(this, Text);
+  function PureText() {
+    _classCallCheck(this, PureText);
 
-    return _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (PureText.__proto__ || Object.getPrototypeOf(PureText)).apply(this, arguments));
   }
 
-  _createClass(Text, [{
+  _createClass(PureText, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -22950,10 +22928,10 @@ var Text = function (_React$PureComponent) {
     }
   }]);
 
-  return Text;
+  return PureText;
 }(_react2.default.PureComponent);
 
-exports.default = Text;
+exports.default = PureText;
 
 /***/ })
 /******/ ]);

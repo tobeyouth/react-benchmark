@@ -2,10 +2,8 @@ import React from 'react'
 
 class PureUser extends React.PureComponent {
 
-
   render () {
     console.log('render pure user')
-
     return (
       <div className='user'>
         <p>is a pure component</p>

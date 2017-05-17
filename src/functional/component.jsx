@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Text from './component-text'
+import ComponentText from './component-text'
 
 class ComponentWrap extends React.Component {
 
@@ -12,7 +12,7 @@ class ComponentWrap extends React.Component {
           [...Array(number).keys()].map((index) => {
             return (
               <div key={`_c_${index}`}>
-                <Text text={ index } />
+                <ComponentText text={ index } />
               </div>
             )
           })
@@ -24,13 +24,3 @@ class ComponentWrap extends React.Component {
 }
 
 export default ComponentWrap
-
-// if (!window.benchmark) {
-//   window.benchmark = {}
-// }
-
-// window.benchmark.component = function (number) {
-//   ReactDom.render(
-//     <Wrap number={ number } />
-//   , document.getElementById('component'))
-// }

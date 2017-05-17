@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Text extends React.Component {
+class ComponentText extends React.Component {
 
   render () {
     return (
@@ -10,4 +10,4 @@ class Text extends React.Component {
 
 }
 
-export default Text
+export default ComponentText

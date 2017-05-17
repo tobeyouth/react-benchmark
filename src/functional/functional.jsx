@@ -25,13 +25,3 @@ class FunctionalWrap extends React.Component {
 }
 
 export default FunctionalWrap
-
-// if (!window.benchmark) {
-//   window.benchmark = {}
-// }
-
-// window.benchmark.functional = function (number) {
-//   ReactDom.render(
-//     <Wrap number={ number } />
-//   , document.getElementById('functional'))
-// }

@@ -3,14 +3,22 @@ import ReactDom from 'react-dom'
 import ComponentWrap from './component'
 import FunctionalWrap from './functional'
 import PureComponentWrap from './pure'
-import Pref from 'react-addons-perf'
+import Perf from 'react-addons-perf'
 
 class Benchmark extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
-    Pref.stop()
-    Pref.printInclusive()
-    Pref.printWasted()
+    Perf.stop()
+    let measurements = Perf.getLastMeasurements()
+    console.log('measurements', measurements)
+    console.log('%c printInclusive', 'font-size: 14px;color: #f00');
+    Perf.printInclusive()
+    console.log('%c printExclusive', 'font-size: 14px;color: #f00');
+    Perf.printExclusive()
+    console.log('%c printWasted', 'font-size: 14px;color: #f00');
+    Perf.printWasted()
+    // console.log('%c printOperations', 'font-size: 14px;color: #f00');
+    // Perf.printOperations()
   }
 
   constructor (props) {
@@ -40,7 +48,7 @@ class Benchmark extends React.Component {
 
   setNumber () {
     let number = ReactDom.findDOMNode(this.refs['input']).value
-    Pref.start()
+    Perf.start()
     this.setState({
       number: parseInt(number, 10)
     })

@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Text extends React.PureComponent {
+class PureText extends React.PureComponent {
 
   render () {
     return (
@@ -10,4 +10,4 @@ class Text extends React.PureComponent {
 
 }
 
-export default Text
+export default PureText

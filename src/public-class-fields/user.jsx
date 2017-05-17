@@ -1,11 +1,6 @@
 import React from 'react'
 
 class User extends React.Component {
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return nextProps !== this.props
-  // }
-
   render () {
     console.log('render user')
     return (
